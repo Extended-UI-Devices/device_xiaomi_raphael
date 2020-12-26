@@ -21,4 +21,7 @@
 <resources>
     <!-- FOD recognizing animation vertical position offset -->
     <dimen name="fod_animation_offset">3dp</dimen>
+
+    <!-- FOD icon padding to make it smaller -->
+    <dimen name="fod_icon_extra_padding">6dp</dimen>
 </resources>
