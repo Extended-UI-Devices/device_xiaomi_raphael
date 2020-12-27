@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/xiaomi/raphael/msmnile.mk)
+$(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common ExtendedUI stuff.
 $(call inherit-product, vendor/exui/config/common.mk)
