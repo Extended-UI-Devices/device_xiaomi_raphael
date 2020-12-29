@@ -25,6 +25,7 @@ import android.util.Log;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.display.KcalUtils;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
@@ -44,8 +45,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         DiracUtils.initialize(context);
         PopupCameraUtils.startService(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-
-        boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
+	        if (KcalUtils.isKcalSupported())
+            KcalUtils.writeCurrentSettings(sharedPrefs);
+	boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
         FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
         boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
         FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");

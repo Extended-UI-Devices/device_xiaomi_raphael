@@ -18,6 +18,13 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                             u:object_r:hal_lineage_camera_motor_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.thermal@2\.0-service\.xiaomi_msmnile                 u:object_r:hal_thermal_default_exec:s0
 
+# Kcal
+/sys/devices/platform/kcal_ctrl.0/kcal_enable                        u:object_r:sysfs_dm:s0
+/sys/devices/platform/kcal_ctrl.0/kcal                               u:object_r:sysfs_dm:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_sat                           u:object_r:sysfs_dm:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_val                           u:object_r:sysfs_dm:s0
+/sys/devices/platform/kcal_ctrl.0/kcal_cont                          u:object_r:sysfs_dm:s0
+
 # Mlipay
 /vendor/bin/mlipayd@1\.1                                                                               u:object_r:hal_mlipay_default_exec:s0
 
