@@ -26,7 +26,7 @@ import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.display.KcalSettingsActivity;
+import org.lineageos.settings.display.Kcal.KcalSettingsActivity;
 
 public class DisplaySettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {

@@ -23,8 +23,8 @@
          android:summary="@string/kcal_settings_summary"
          android:persistent="false" >
          <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="org.lineageos.settings.display"
-                android:targetClass="org.lineageos.settings.display.KcalSettingsActivity"" />
+                android:targetPackage="org.lineageos.settings.display.Kcal"
+                android:targetClass="org.lineageos.settings.display.Kcal.KcalSettingsActivity"" />
     </Preference>
 
     <SwitchPreference

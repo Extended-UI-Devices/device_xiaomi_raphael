@@ -123,7 +123,7 @@
 
 
         <activity
-            android:name="org.lineageos.settings.display.KcalSettingsActivity"
+            android:name="org.lineageos.settings.display.Kcal.KcalSettingsActivity"
             android:exported="true"
             android:label="@string/kcal_settings_title"
             android:launchMode="singleTask" >

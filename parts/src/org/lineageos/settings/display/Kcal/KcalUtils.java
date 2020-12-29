@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.display;
+package org.lineageos.settings.display.Kcal;
 
 import android.content.SharedPreferences;
 

@@ -25,7 +25,7 @@ import android.util.Log;
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.popupcamera.PopupCameraUtils;
 import org.lineageos.settings.utils.FileUtils;
-import org.lineageos.settings.display.KcalUtils;
+import org.lineageos.settings.display.Kcal.KcalUtils;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
