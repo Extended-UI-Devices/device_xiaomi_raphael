@@ -16,6 +16,17 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+         android:key="kcal_display_settings"
+         android:title="@string/kcal_settings_title"
+         android:summary="@string/kcal_settings_summary"
+         android:persistent="false" >
+         <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="org.lineageos.settings.display"
+                android:targetClass="org.lineageos.settings.display.KcalSettingsActivity"" />
+    </Preference>
+
     <SwitchPreference
         android:key="dc_dimming_enable"
         android:defaultValue="false"
@@ -27,4 +38,5 @@
         android:defaultValue="false"
         android:title="@string/hbm_mode_title"
         android:summary="@string/hbm_mode_summary" />
+
 </PreferenceScreen>

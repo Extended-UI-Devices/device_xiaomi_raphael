@@ -26,6 +26,7 @@ import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
+import org.lineageos.settings.display.KcalSettingsActivity;
 
 public class DisplaySettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener {
@@ -34,8 +35,10 @@ public class DisplaySettingsFragment extends PreferenceFragment implements
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
     private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
     private SwitchPreference mHBMPreference;
+    private static final String PREF_KCAL = "kcal_display_settings";
     private static final String HBM_ENABLE_KEY = "hbm_mode";
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
+    private Preference mKcal;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -57,6 +60,13 @@ public class DisplaySettingsFragment extends PreferenceFragment implements
             mHBMPreference.setSummary(R.string.hbm_enable_summary_not_supported);
             mHBMPreference.setEnabled(false);
         }
+
+        mKcal = (Preference)findPreference(PREF_KCAL);
+        mKcal.setOnPreferenceClickListener(preference -> {
+            Intent intent = new Intent(getActivity().getApplicationContext(), KcalSettingsActivity.class);
+            startActivity(intent);
+            return true;
+        });
     }
 
     @Override
