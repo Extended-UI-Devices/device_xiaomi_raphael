@@ -17,6 +17,7 @@
 package org.lineageos.settings.display;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import androidx.preference.Preference;
